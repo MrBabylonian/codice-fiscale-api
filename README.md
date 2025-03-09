@@ -34,34 +34,17 @@ A modern Spring Boot REST API that extracts demographic information from Italian
   }
   ```
 
-🌍 Live API Access
-API URL: https://codice-fiscale-api.onrender.com
-🔧 How It Works
+## 🌍 Live API Access
+- **API URL:** [https://codice-fiscale-api.onrender.com](https://codice-fiscale-api.onrender.com)
+
+## 🔧 How It Works
+
 The API analyzes the Codice Fiscale structure as follows:
 
-📌 Characters 7-8 → Year of birth
-🔤 Character 9 → Month letter code
-🔢 Characters 10-11 → Day of birth (adding 40 for females)
-📝 Installation
-Clone the Repository
+- 📌 **Characters 7-8** → Year of birth
+- 🔤 **Character 9** → Month letter code
+- 🔢 **Characters 10-11** → Day of birth (adding 40 for females)
 
-bash
-Copy
-git clone https://github.com/yourusername/codice-fiscale-api.git
-cd codice-fiscale-api
-Build with Gradle
-
-bash
-Copy
-./gradlew build
-Run the Application
-
-bash
-Copy
-./gradlew bootRun
-📚 API Documentation
-Local: http://localhost:8080/swagger-ui.html
-Live: https://codice-fiscale-api.onrender.com/swagger-ui.html
 🔒 Error Handling
 The API includes robust error handling for:
 
@@ -84,10 +67,4 @@ The API includes robust error handling for:
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Steps to Contribute:
-Fork the repository
-Create a new branch: git checkout -b feature-branch
-Commit your changes: git commit -m 'Add new feature'
-Push to the branch: git push origin feature-branch
-Open a Pull Request
 🎯 Happy Coding! 🚀
