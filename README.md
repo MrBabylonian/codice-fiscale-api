@@ -32,6 +32,7 @@ A modern **Spring Boot REST API** that extracts demographic information from Ita
   "dataDiNascita": "1990-01-01",
   "eta": 34
 }
+```
 
 🌍 Live API Access
 API URL: https://codice-fiscale-api.onrender.com
