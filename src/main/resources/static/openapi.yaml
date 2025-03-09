@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: Codice Fiscale API
+  description: API per calcolare l'età e la data di nascita dal codice fiscale Italiano
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/api
+paths:
+  /codicefiscale:
+    get:
+      summary: Calcola l'età e la data di nascita dal codice fiscale
+      description: Restituisce l'età e la data di nascita calcolate dal codice fiscale
+      parameters:
+        - in: query
+          name: codiceFiscale
+          required: true
+          schema:
+            type: string
+          description: Il codice fiscale da processare
+      responses:
+        '200':
+          description: Codice fiscale processato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CodiceFiscaleInfo'
+        '400':
+          description: Errore nel processare il codice fiscale
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Descrizione dell'errore
+components:
+  schemas:
+    CodiceFiscaleInfo:
+      type: object
+      properties:
+        eta:
+          type: integer
+          description: L'età calcolata
+        dataDiNascita:
+          type: string
+          format: date
+          description: La data di nascita calcolata
