@@ -32,9 +32,7 @@ Response Example:
 }
 
 ## 🌍 Live API Access
-- API Base URL: `https://codice-fiscale-api.onrender.com`
-- Swagger UI: `https://codice-fiscale-api.onrender.com/swagger-ui.html`
-- Health Check: `https://codice-fiscale-api.onrender.com/actuator/health`
+- API URL: `https://codice-fiscale-api.onrender.com`
 
 ## 🔧 How It Works
 The API analyzes the Codice Fiscale structure as follows:
