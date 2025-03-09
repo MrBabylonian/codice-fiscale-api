@@ -1,4 +1,5 @@
 # 🎯 Codice Fiscale API
+
 A modern Spring Boot REST API that extracts demographic information from Italian Fiscal Codes (Codice Fiscale), calculating age and birth date.
 
 ## 🚀 Features
@@ -23,45 +24,40 @@ A modern Spring Boot REST API that extracts demographic information from Italian
 
 ## 🔍 API Endpoints
 ### Get Demographics from Codice Fiscale
-GET /api/codicefiscale?codiceFiscale={codiceFiscale}
+**GET** `/api/codicefiscale?codiceFiscale={codiceFiscale}`
 
-Response Example:
+**Response Example:**
+```json
 {
   "dataDiNascita": "1990-01-01",
   "eta": 34
 }
-
-## 🌍 Live API Access
-- API URL: `https://codice-fiscale-api.onrender.com`
-
-## 🔧 How It Works
+🌍 Live API Access
+API URL: https://codice-fiscale-api.onrender.com
+🔧 How It Works
 The API analyzes the Codice Fiscale structure as follows:
 
 📌 Characters 7-8 → Year of birth
 🔤 Character 9 → Month letter code
 🔢 Characters 10-11 → Day of birth (adding 40 for females)
-
-## 📝 Installation
-Clone the repository:
-
+📝 Installation
+Clone the Repository
+bash
+Copy
 git clone https://github.com/yourusername/codice-fiscale-api.git
 cd codice-fiscale-api
-
-Build with Gradle:
-
+Build with Gradle
+bash
+Copy
 ./gradlew build
-
-Run the application:
-
+Run the Application
+bash
+Copy
 ./gradlew bootRun
-
-## 📚 API Documentation
-Access the OpenAPI documentation at:
-
-➡️ Local: `http://localhost:8080/swagger-ui.html`
-➡️ Live: `https://codice-fiscale-api.onrender.com/swagger-ui.html`
-
-## 🔒 Error Handling
+📚 API Documentation
+Local: http://localhost:8080/swagger-ui.html
+Live: https://codice-fiscale-api.onrender.com/swagger-ui.html
+🔒 Error Handling
 The API includes robust error handling for:
 
 ❌ Invalid Codice Fiscale length
@@ -69,8 +65,7 @@ The API includes robust error handling for:
 ❌ Invalid date formats
 ❌ Invalid number formats
 ❌ CORS related issues
-
-## 📦 Latest Changes
+📦 Latest Changes
 ✅ Implemented CodiceFiscaleInfo model with birth date and age fields
 ✅ Created CodiceFiscaleService for demographic info extraction
 ✅ Added month conversion and age calculation logic
@@ -81,14 +76,13 @@ The API includes robust error handling for:
 ✅ Implemented health checks and metrics
 ✅ Added HTTP compression and HTTP/2 support
 ✅ Configured logging for production
-
-## 🤝 Contributing
+🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
+Steps to Contribute:
 Fork the repository
 Create a new branch (git checkout -b feature-branch)
 Commit your changes (git commit -m 'Add new feature')
 Push to the branch (git push origin feature-branch)
 Open a Pull Request
-
-## 🎯 Happy Coding! 🚀
+🎯 Happy Coding! 🚀
