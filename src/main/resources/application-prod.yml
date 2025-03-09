@@ -1,6 +1,6 @@
 server:
   port: ${PORT:8080}
-  forward-headers-strategy: FRAMEWORK
+  forward-headers-strategy: NATIVE
   compression:
     enabled: true
   http2:
@@ -13,6 +13,13 @@ spring:
   web:
     cors:
       enabled: true
+      allowed-origins: https://codice-fiscale-api.onrender.com
+      allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+      allowed-headers: "*"
+      exposed-headers: Access-Control-Allow-Origin
+      allow-credentials: true
+      max-age: 3600
+      mapping: "/**"
 
 springdoc:
   swagger-ui:
@@ -30,6 +37,9 @@ management:
       base-path: /actuator
       exposure:
         include: health,info,metrics
+      cors:
+        allowed-origins: https://codice-fiscale-api.onrender.com
+        allowed-methods: GET,POST,PUT,DELETE,OPTIONS
   endpoint:
     health:
       show-details: never
@@ -47,5 +57,6 @@ logging:
   level:
     root: INFO
     com.codicefiscaleapi: INFO
+    org.springframework.web: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

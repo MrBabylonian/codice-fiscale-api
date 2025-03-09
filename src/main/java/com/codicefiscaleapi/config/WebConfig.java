@@ -10,10 +10,11 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("*")  // Try this instead of allowedOriginPatterns
+                .allowedOrigins("https://codice-fiscale-api.onrender.com/")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .exposedHeaders("Access-Control-Allow-Origin")
+                .allowCredentials(true)  // Add this if using cookies/credentials
                 .maxAge(3600);
     }
 }
