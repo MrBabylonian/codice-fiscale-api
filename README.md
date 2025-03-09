@@ -9,7 +9,6 @@ A modern Spring Boot REST API that extracts demographic information from Italian
 - ✅ Validate Codice Fiscale format
 - 📖 OpenAPI documentation
 - 🌐 Cross-Origin Resource Sharing (CORS) enabled
-- 🚀 Live deployment on Render.com
 - 📊 HTTP compression and HTTP/2 support
 
 ## 🛠 Tech Stack
