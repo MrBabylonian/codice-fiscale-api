@@ -45,26 +45,31 @@ The API analyzes the Codice Fiscale structure as follows:
 - 🔤 **Character 9** → Month letter code
 - 🔢 **Characters 10-11** → Day of birth (adding 40 for females)
 
-🔒 Error Handling
+## 🔒 Error Handling
+
 The API includes robust error handling for:
 
-❌ Invalid Codice Fiscale length
-❌ Invalid month letters
-❌ Invalid date formats
-❌ Invalid number formats
-❌ CORS related issues
-📦 Latest Changes
-✅ Implemented CodiceFiscaleInfo model with birth date and age fields
-✅ Created CodiceFiscaleService for demographic info extraction
-✅ Added month conversion and age calculation logic
-✅ Defined OpenAPI specification
-✅ Set up error handling and validation
-✅ Added CORS support for cross-origin requests
-✅ Configured production environment on Render.com
-✅ Implemented health checks and metrics
-✅ Added HTTP compression and HTTP/2 support
-✅ Configured logging for production
-🤝 Contributing
+- ❌ **Invalid Codice Fiscale length**
+- ❌ **Invalid month letters**
+- ❌ **Invalid date formats**
+- ❌ **Invalid number formats**
+- ❌ **CORS related issues**
+
+## 📦 Latest Changes
+
+- ✅ **Implemented CodiceFiscaleInfo model** with birth date and age fields
+- ✅ **Created CodiceFiscaleService** for demographic info extraction
+- ✅ **Added month conversion and age calculation logic**
+- ✅ **Defined OpenAPI specification**
+- ✅ **Set up error handling and validation**
+- ✅ **Added CORS support** for cross-origin requests
+- ✅ **Configured production environment** on Render.com
+- ✅ **Implemented health checks and metrics**
+- ✅ **Added HTTP compression and HTTP/2 support**
+- ✅ **Configured logging for production**
+
+## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
 
 🎯 Happy Coding! 🚀
