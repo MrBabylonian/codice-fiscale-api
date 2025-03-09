@@ -10,6 +10,9 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  web:
+    cors:
+      enabled: true
 
 springdoc:
   swagger-ui:
