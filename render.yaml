@@ -2,12 +2,9 @@ services:
   - type: web
     name: codice-fiscale-api
     env: docker
-    buildCommand: ./gradlew bootJar
-    startCommand: java -jar build/libs/app.jar
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /actuator/health
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
-      - key: SERVER_PORT
-        value: 8080
-    healthCheckPath: /actuator/health
     autoDeploy: true

@@ -72,4 +72,5 @@ The API includes robust error handling for:
 
 Contributions, issues, and feature requests are welcome!
 
-🎯 Happy Coding! 🚀
+## 🎯 Happy Coding! 🚀
+  

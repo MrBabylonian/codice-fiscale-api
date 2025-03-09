@@ -1,10 +1,10 @@
-FROM gradle:8.6-jdk21 AS builder
+FROM gradle:8.5.0-jdk21 AS build
 WORKDIR /app
 COPY . .
 RUN gradle bootJar --no-daemon
 
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
-COPY --from=builder /app/build/libs/app.jar .
+COPY --from=build /app/build/libs/*.jar app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "-Dspring.profiles.active=prod", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

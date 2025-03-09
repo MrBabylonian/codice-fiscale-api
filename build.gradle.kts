@@ -11,10 +11,6 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
 }
 
-tasks.bootJar {
-    archiveFileName.set("app.jar")
-}
-
 configurations {
     compileOnly {
         extendsFrom(configurations.annotationProcessor.get())
@@ -29,6 +25,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -37,4 +34,8 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.build {
+    dependsOn(tasks.bootJar)
 }
