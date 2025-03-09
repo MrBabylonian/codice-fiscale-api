@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "https://codice-fiscale-api.onrender.com")
 @Tag(name = "Codice Fiscale", description = "Calcola l'età e la data di nascita dal codice fiscale")
 public class CodiceFiscaleController {
 
